@@ -1,0 +1,1500 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --background-color-principal: #212529;
+    --color-principal: #cfcfcf;
+    --color-tom-de-cinza: rgb(137, 137, 137);
+}
+
+html.modo-claro{
+    --background-color-principal: #ffffff;
+    --color-principal: #000000;
+    --color-tom-de-cinza: rgb(94, 94, 94);
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+nav, nav ul, nav i{ /*menu hamburguer oculto*/
+    display: none;
+}
+
+#voltar-ao-topo{ /*botão voltar ao topo*/
+    position: fixed;        
+    right: 40px;
+    bottom: 25px;
+    width: 20px;
+    height: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--color-principal);
+    background-color: rgba(130, 130, 130, 0.317);
+    backdrop-filter: blur(10px);
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+#voltar-ao-topo:hover{
+    opacity: 0.7;
+    transform: scale(0.98);
+}
+
+/*inicio das tags semânticas*/
+html{
+    background-color: rgb(76, 76, 76, 1);
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: var(--background-color-principal);
+    max-width: 100vw;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+header{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 60px;
+    background-color: rgba(130, 130, 130, 0.5);
+    backdrop-filter: blur(15px);
+    padding: 10px 0px;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--color-principal);
+    transition: ease-in-out 0.5s;
+}
+
+
+ul li{
+    list-style: none;
+}
+
+section{
+    margin: 70px 0px;
+    padding: 30px 70px 50px 70px;
+    height: auto;
+    display: flex;
+    color: var(--color-principal);
+    z-index: 1;
+}
+
+section aside{
+    padding: 5px;
+}
+
+footer{
+    color: var(--color-principal);
+    background-color: rgb(76, 76, 76, 1);
+}
+
+/*fim das tags semânticas*/
+
+/*inicio do header*/
+.header-conteiner{
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    gap: 70px;
+}
+
+.header-conteiner li a{
+    position: relative;
+    color: var(--color-principal);
+    transition: ease-in-out 0.3s;
+}
+
+.header-conteiner li a:hover{
+    opacity: 0.5;
+}
+
+.modo-claro-conteiner{ /*conteiner que fica os checkboxes 'trocar modo claro/escuro' e 'traduzir'*/
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    height: 40px;
+    width: auto; 
+    position: absolute;
+    right: 40px;
+}
+
+/*BOTÃO PARA TROCAR ENTRE MODO ESCURO E MODO CLARO*/
+.toggle {
+    background-color: rgba(130, 130, 130, 0.317);
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.toggle input{
+    display: none;
+}
+
+.icon { /*alinhamento do icone dentro do checkbox*/
+    grid-column: 1 / 1;
+    grid-row: 1 / 1;
+    transition: transform 500ms;
+}
+  
+.icon--sol {
+    transition-delay: 200ms;
+    color: var(--color-principal);
+}
+  
+.icon--lua {
+    transform: scale(0);
+    color: var(--color-principal);
+}
+  
+#switch:checked + .icon--sol {
+    transform: rotate(360deg) scale(0);
+}
+  
+#switch:checked ~ .icon--lua {
+    transition-delay: 200ms;
+    transform: scale(1) rotate(360deg);
+}
+
+.modo-claro-conteiner input{
+    display: none;    
+}
+/*fim do header*/
+
+/*inicio #INICIO*/
+
+#inicio{
+    margin-top: -75px;
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--background-color-principal);
+    color: var(--color-principal);
+}
+#aside1, #aside2{
+    margin-top: 70px;
+}
+
+/*aside 1*/
+#aside1{
+    justify-content: center;
+    align-items: center;
+}
+
+#me-img{
+    border-radius: 50%;
+    object-fit: cover;
+    width: 35vw;
+    height: auto;
+    z-index: -5;
+    filter: brightness(0.95);
+}
+
+/*aside 2*/
+#aside2{
+    margin: 0;
+    margin-top: 150px;
+    padding: 0px 70px 0px 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    text-align: center;
+}
+
+#aside2 h1, #aside2 span, #aside2 p{
+    color: var(--color-principal);
+    margin: 0;
+    padding: 0;
+}
+
+#aside2 h1{
+    font-weight: 500;
+}
+
+#aside2 span{
+    font-size: 70px;
+    font-weight: 500;
+    line-height: 1;
+}
+
+#aside2 p{
+    font-size: 25px;
+    font-weight: 600;
+    background: linear-gradient(to right, rgb(18, 133, 255), rgb(239, 9, 255));
+    background-clip: text;
+    color: transparent;
+}
+
+.social-icons{
+    padding: 1% 35% 1% 35%;
+    margin-top: 3%;
+    display: flex;
+    justify-content: center;
+    gap: 15%;
+}
+
+.social-icons .icons{
+    color: var(--color-principal);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 20px;
+    padding: 7px;
+    border: solid 2px, var(--color-principal);
+    border-radius: 50%;
+    transition: ease-in-out 0.5s;
+    font-size: 17px;
+}
+
+#instagram:hover, #linkedin:hover, #github:hover{
+    background-color: var(--color-principal);
+    color: var(--background-color-principal);
+}
+
+#btn-me-chame{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    cursor: pointer;
+    color: var(--color-principal);
+    margin: 15px;
+    padding: 0px 10px 0px 10px;
+    justify-content: center;
+    align-items: center;
+    width: 275px;
+    height: 60px;
+    border-radius: 25px;
+    font-size: 17px;
+    font-weight: 600;
+    border: solid 2px;
+    background-color: transparent;
+    transition: ease-in-out 0.5s;
+}
+
+#btn-me-chame a{
+    color: var(--color-principal);
+}
+
+#btn-me-chame h6{
+    font-size: 17px;
+    font-weight: 600;
+    align-self: center;
+}
+
+#btn-me-chame:hover{
+    color: var(--background-color-principal);
+    background-color: var(--color-principal);
+    /* border: none; */
+}
+
+
+/*fim #INICIO*/
+
+/* inicio #PROJETOS */
+#projetos, #soft-skills, #hard-skills, #sobre-mim, #formulario{ /* margin-top em todas as seçoes, exeto no #inicio*/
+    justify-content: start !important;
+    min-height: 80vh !important;
+    padding: 100px 0 !important;
+    margin: 50px 0 !important;
+}
+
+#projetos h1, #soft-skills h1, #hard-skills h1, #sobre-mim h1{
+    display: flex;
+    margin: 0;
+    width: 100%;
+    padding: 0px 0px 20px 0px ;
+    line-height: 0.5;
+    color: rgb(137, 137, 137) ;
+    font-size: 30px;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-conteiner{ /* estilização de todos os conteiners de cards */
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    transition: ease-in-out 0.5s;
+}
+
+button a{
+    text-decoration: none;
+}
+
+.card-conteiner .card-project button:hover{
+    background-color: var(--background-color-principal);
+    border-color: var(--background-color-principal);
+    opacity: 0.9;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); 
+    transition: background 0.4s ease-in-out;
+    color: var(--color-principal) !important;
+}
+
+.card-conteiner .card-project,
+.card-conteiner .card-soft-skills,
+.card-conteiner .card-hard-skills,
+.card-sobre-mim{
+    background-color: var(--background-color-principal);
+    color: var(--color-principal);
+    box-shadow: 3px 3px 15px rgba(255, 255, 255, 0.5);
+    
+}
+
+.img-project{
+    aspect-ratio: 16/9;
+    display: flex;
+    width: 300px;
+    height: auto;
+    object-fit: cover;
+    padding: 0;
+    margin: 0;
+    border-radius: 15px;
+}
+
+.card-conteiner .card-project{
+    position: relative;
+    /* cursor: pointer; */
+    text-align: center;
+    line-height: 1.5;
+    border: solid 3px var(--color-principal);
+    flex-wrap: wrap;
+    border-radius: 25px;
+    padding: 15px;
+    margin: 15px;
+    width: 300px;
+    height: 470px;
+    text-align: left;
+    transition: ease-in-out 0.5s;
+}
+
+.card-project button{
+    background-color: transparent;
+    color: var(--color-principal);
+    border: 2px solid;
+    border-color: var(--color-principal);
+    border-radius: 15px;
+    width: auto;
+    padding: 5px 10px;
+    margin: 5px 10px 5px 0px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    opacity: 0.6;
+    font-size: 15px;
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+    transition: background ease-in-out 0.3s;
+}
+
+.card-conteiner .card-project:hover{
+    background-color: var(--color-tom-de-cinza);
+    color: var(--background-color-principal);
+    border-color: var(--color-tom-de-cinza);
+}
+
+.card-conteiner .card-project:hover h2{
+    color: var(--background-color-principal);
+}
+
+.card-conteiner .card-project:hover p{
+    color: var(--background-color-principal);
+}
+
+.card-conteiner .card-project:hover button{
+    border-color: var(--background-color-principal);
+    color: var(--background-color-principal);
+}
+
+.card-conteiner .card-project:hover button a{
+    color: var(--color-principal);
+}
+
+
+.card-conteiner .tech-icons{
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2%;
+}
+
+.card-conteiner .card-project h2{
+    margin: 15px 0px 0px 0px;
+    padding: 0;  
+    color: var(--color-principal); 
+    transition: ease-in-out 0.5s;
+}
+
+.card-conteiner .card-project p{
+    margin: 0px 0px 15px 0px;
+    padding: 0;
+    color: var(--color-principal);
+    transition: ease-in-out 0.5s;
+}
+
+.card-conteiner .tech-icons li{
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin: 0;
+    margin-bottom: 7px;
+    padding: 4px 10px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 20px;
+    font-size: 17px;
+}
+
+.card-conteiner h6{
+    margin: 0;
+    padding: 0;
+    font-weight: 500;
+    color: var(--color-principal);
+    transition: ease-in-out 0.5s;
+}
+
+.card-conteiner .card-project:hover .tech-icons li h6{
+    color: black;
+}
+
+#html5-colorfull{
+    color: rgb(218, 74, 35);
+    background-color: rgba(218, 74, 35, 0.2);
+}
+#css3-colorfull{
+    color: rgb(0, 106, 178);
+    background-color: rgba(0, 106, 178, 0.2);
+}
+#ux-ui-colorfull{
+    color: rgb(132, 31, 255);
+    background-color: rgba(132, 31, 255, 0.2);
+}
+
+#javascript-colorfull{
+    color: rgb(211, 214, 78);
+    background-color: rgba(251, 255, 0, 0.2);
+}
+
+#api-colorfull{
+    color: var(--color-principal);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* fim #PROJETOS */
+
+
+/*inicio MODAL PROJETOS estilizacsao do modal de cada projeto*/ 
+.modal{
+    visibility: hidden;
+    padding: 0;
+    margin: 0;
+    width: auto;
+    height: 100vh;
+    backdrop-filter: blur(10px);
+    background-color: var(--background-color-principal);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateY(-20px);
+    transition: visibility 0s linear 0.2s, opacity 0.2s ease, transform 0.2s ease;
+}
+
+#modal-01{
+    visibility: hidden;
+    opacity: 0;
+
+}
+
+#modal-01.visivel{
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+    transition-delay: 0s;
+    transform: translateY(0); /* Posição normal */
+}
+
+.modal .img-conteiner{
+    background-color: rgba(77, 77, 77, 0.5);
+    backdrop-filter: blur(20px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    position: relative;
+}
+
+.modal .img-conteiner button{ /*botao para fechar o modal 'x'*/
+    padding: 0;
+    margin: 0;
+    background-color: var(--color-principal);
+    color: var(--background-color-principal);
+    border: none;
+    box-shadow: 3px 3px 7px rgba(77, 77, 77, 0.5);
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 50%;    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background ease-in-out 0.1s;
+} 
+
+.modal .img-conteiner button:hover{
+    opacity: 0.4;
+}
+
+.modal .img-conteiner img{
+    max-width: 600px;
+    height: 300px;
+    object-fit: cover;
+    display: flex;
+    box-shadow: 10px -50px 100px rgb(44, 44, 44), 
+               -10px -50px 100px rgb(44, 44, 44);
+}
+
+.modal .modal-projeto{
+    background-color: var(--background-color-principal);
+    margin: 0;
+    padding: 10px 70px;
+    height: 400px;
+    width: 1024px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    z-index: 101;
+
+
+}
+
+.modal .modal-projeto h1{
+    margin: 10px 0;
+    padding: 0;
+    font-size: 30px;
+
+}
+
+.modal .modal-projeto h6{
+    font-size: 13px;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+}
+
+.modal .modal-projeto p{
+    font-size: medium;
+
+}
+
+.modal .modal-projeto h2{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.modal .modal-projeto .tech-icons{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    height: 25px;
+}
+
+.modal .modal-projeto .tech-icons li{
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin: 0;
+    margin: 0;
+    padding: 4px 10px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 20px;
+    font-size: 17px;
+}
+
+.modal .modal-projeto .botoes{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+.modal .modal-projeto button{ /*botoes de baixo*/
+    background-color: transparent;
+    color: var(--color-principal);
+    border: 2px solid var(--color-principal);;
+    border-radius: 15px;
+    width: auto;
+    padding: 5px 10px;
+    margin: 30px 0;
+    font-size: 15px;
+    cursor: pointer;
+    display: flex;
+    align-self: flex-end;
+    transition-delay: 0s;
+    transition: none;
+    transition: background ease-in-out 0.3s;
+}
+
+.modal .modal-projeto button:hover{
+    background-color: var(--color-principal);
+    color: var(--background-color-principal);
+    border: 2px solid var(--color-principal);
+    box-shadow: 3px 3px 7px rgba(77, 77, 77, 0.5);
+}
+
+.modal .modal-projeto button:hover a{
+    color: var(--background-color-principal);
+}
+
+.modal .modal-projeto button a{
+    color: var(--color-principal);
+    transition: ease-in-out 0.3s;
+}
+
+/* fim MODAL PROJETOS */
+
+
+/*inicio #SOFT SKILLS*/
+#soft-skills{
+    margin-top: 70px;
+    padding: 50px 70px 50px 70px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+}
+
+#soft-skills i{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-size: 25px;
+}
+
+#soft-skills h2{
+    margin: 0;
+    padding: 0;
+    line-height: 1.3;
+}
+
+#soft-skills p{
+    margin: 5px 0px 0px 0px;
+    padding: 0;
+    line-height: 1.3;
+}
+
+.card-conteiner .card-soft-skills{
+    text-align: center;
+    line-height: 1.5;
+    border: solid 3px var(--color-principal);
+    flex-wrap: wrap;
+    border-radius: 25px;
+    padding: 15px;
+    margin: 15px;
+    width: 350px;
+    height: 190px;
+    text-align: left;
+    transition: ease-in-out 0.5s;
+}
+
+#soft-skills .card-soft-skills:hover{
+    background-color: var(--color-tom-de-cinza);
+    color: var(--background-color-principal);
+    border-color: var(--color-tom-de-cinza);
+}
+
+/*fim #SOFT SKILLS*/
+
+/*inicio #HARD SKILLS*/
+#hard-skills{
+    padding: 0px 70px 50px 70px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    color: var(--color-principal);
+}
+
+.card-conteiner .card-hard-skills{
+    text-align: center;
+    line-height: 1.5;
+    border: solid 3px var(--color-principal);
+    flex-wrap: wrap;
+    border-radius: 25px;
+    padding: 15px;
+    margin: 15px;
+    width: 325px;
+    height: 210px;
+    text-align: left;
+    transition: ease-in-out 0.5s;
+}
+
+.card-hard-skills i{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-size: 25px;
+    color: var(--color-principal);
+    transition: ease-in-out 0.5s;
+}
+
+.card-hard-skills h2{
+    margin: 0;
+    padding: 0;
+    line-height: 1.3;
+}
+
+.card-hard-skills p{
+    margin: 5px 0px 0px 0px;
+    padding: 0;
+    line-height: 1.3;
+}
+
+.card-conteiner .card-hard-skills:hover{
+    background-color: var(--color-tom-de-cinza);
+    color: var(--background-color-principal);
+    border-color: var(--color-tom-de-cinza);
+}
+
+.card-conteiner .card-hard-skills:hover #html5{
+    color: rgb(218, 74, 35);
+    transition: ease-in-out 0.5s;
+}
+
+.card-conteiner .card-hard-skills:hover #css3{
+    color: rgb(0, 124, 207);
+    transition: ease-in-out 0.5s;
+}
+
+.card-conteiner .card-hard-skills:hover #ux-ui{
+    color: rgb(80, 0, 178);
+    transition: ease-in-out 0.5s;
+}
+
+.card-conteiner .card-hard-skills:hover #javascript{
+    color: rgb(251, 255, 0);
+    transition: ease-in-out 0.5s;
+}
+
+/*fim #HARD SKILLS*/
+
+/* inicio #SOBRE-MIM */
+#sobre-mim{
+    height: 100vh;
+    padding: 0px 70px 50px 70px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    color: var(--color-principal);
+}
+
+.card-sobre-mim{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    border: solid 3px var(--color-principal);
+    flex-direction: row;
+    gap: 2%;
+    border-radius: 25px;
+    padding: 15px;
+    margin: 15px;
+    width: 900px;
+    height: auto;
+    transition: ease-in-out 0.5s;
+}
+
+.card-sobre-mim img{
+    cursor: not-allowed;
+    padding: 0;
+    margin: 0;
+    width: 450px;
+    height: 420px;
+    border-radius: 25px;
+    object-fit: cover;
+    display: flex;
+}
+
+.card-sobre-mim .descricao{
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-content: center;
+    text-align: left;
+}
+
+.descricao h2, .descricao h3, .descricao p, .descricao h4{
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+}
+
+.descricao i{
+    margin-top: 5px;
+    justify-content: start;
+    align-content: center;
+    text-align: center;
+    font-size: 17px;
+    border-radius: 50%;
+    color: rgb(118, 118, 118);
+}
+
+.descricao .div01{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.descricao h2{
+    font-size: 30px;
+    margin-bottom: 3px;
+
+}
+
+.descricao h3{
+    display: flex;
+    gap: 7px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.descricao h4{
+    display: flex;
+    gap: 7px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.descricao p{
+    display: flex;
+    gap: 7px;
+    align-items:flex-start;
+    margin-bottom: 10px;
+}
+
+/* fim #SOBRE-MIM */
+
+/* inicio #FORMULÁRIO */
+#formulario{
+    height: 50vh;
+    padding: 0px 70px 50px 70px;
+    margin: 0px 0px 300px 0px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center !important;
+    gap: 0;
+    color: var(--color-principal);
+}
+
+form h1{
+    display: flex;
+    margin: 10px;
+    width: 100%;
+    padding: 0px 0px 20px 0px ;
+    line-height: 0.5;
+    color: var(--color-principal) ;
+    font-size: 30px;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#formulario form{
+    color: var(--color-principal);
+    background-color: var(--background-color-principal);
+    width: 500px;
+    height: 425px;
+    border: solid 3px var(--color-principal);
+    border-radius: 25px;
+    box-shadow: 3px 3px 15px rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    margin: 15px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#formulario label{
+    margin-bottom: 3px;
+}
+
+#formulario input, #tipo-de-servico{
+    background-color: var(--background-color-principal);
+    color: var(--color-principal);
+    padding: 5px;
+    margin: 5px 0px 5px 0px;
+    border: var(--color-principal) solid 3px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 7px rgba(77, 77, 77, 0.5);
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+#descricao-de-servico{
+    background-color: var(--background-color-principal);
+    color: var(--color-principal);
+    padding: 5px;
+    height: 100px;
+    margin: 5px 0px 5px 0px;
+    border: var(--color-principal) solid 3px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 7px rgba(77, 77, 77, 0.5);
+    opacity: 0.9;
+    resize: none;
+    overflow-y: hidden;
+}
+
+#formulario form button{
+    margin: 5px 0px 0px 0px;
+    padding: 3px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 100px;
+    background-color: transparent;
+    color: var(--color-principal);
+    border: 2px solid var(--color-principal);
+    border-radius: 10px;
+    font-size: 17px;
+    justify-content: space-around;
+    transition: ease-in-out 0.5s;
+
+}
+
+#formulario form button:hover{
+    background-color: var(--color-principal);
+    color: var(--background-color-principal);
+    border: 2px solid var(--color-principal);
+    box-shadow: 3px 3px 7px rgba(77, 77, 77, 0.5);
+}
+
+/* fim #FORMULÁRIO */
+
+/* inicio FOOTER */
+footer{
+    margin: 0;
+    padding: 10px 10px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+footer p{
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 10px;
+}
+/* fim #FOOTER */
+
+@media (min-width: 320px) and (max-width: 435px) { /*responsividade em smartphones*/
+    body{
+        width: 100vw;
+        height: auto;
+    }
+
+    header{
+        display: none;
+        position: relative;
+    }
+
+    section{
+        padding: 15px;
+    }
+
+    /*menu hamburger*/
+    nav{
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 0;
+        margin: 0;
+        position: fixed;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        top: 20px;
+        left: 20px;
+        font-size: 25px;
+        cursor: pointer;
+        transition: ease-in-out 0.5s;
+    }
+    
+    nav a{
+        color: var(--color-principal);
+    }
+    
+    nav ul{
+        display: none;
+        flex-direction: column;
+        padding: 3px 7px;
+        margin: 0;
+        font-size: 15px;
+        background-color: rgba(130, 130, 130, 0.5);
+        backdrop-filter: blur(10px);
+        border-radius: 10px;
+        gap: 7px;
+    }
+    
+    nav ul li{
+        margin: 5px 0px;
+        padding: 5px;
+    }
+    
+    nav i{
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        color: var(--color-principal);
+        background-color: rgba(130, 130, 130, 0.5);
+        backdrop-filter: blur(10px);
+        padding: 12px;
+        border-radius: 50%;
+        font-size: 17px;
+        width: 17px;
+        height: 17px;
+    }
+    
+    nav i:hover + ul, ul:hover{
+        display: flex;
+    }
+    
+    nav ul li a:active{
+        opacity: 0.5;
+        transform: scale(0.97);
+    }
+    
+    #voltar-ao-topo{ /*botão voltar ao topo*/
+        bottom: 20px;
+        right: 20px;
+    }
+    
+    .modo-claro-conteiner{ /*conteiner com idiomas e modo claro */
+        position: fixed;
+        top: 20px;
+        right: 20px;
+    }
+
+    .modo-claro-conteiner p{
+        display: none;
+    }
+    /* fim do menu */
+
+    #inicio{
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        background-color: var(--background-color-principal);
+        color: var(--color-principal);
+        align-items: center;
+        justify-content: flex-start;
+        margin: 0;
+        padding: 50px 15px 0 15px;
+    }
+
+    /*aside 1*/
+    #aside1{
+        margin-top: 0px;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    
+    #me-img{
+        border-radius: 50%;
+        object-fit: cover;
+        width: 300px;
+        height: auto;
+        z-index: -5;
+        filter: brightness(0.95);
+    }
+    
+    /*aside 2*/
+    #aside2{
+        margin: 0;
+        margin-top: 0px;
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content:center;
+        text-align: center;
+    }
+    
+    #aside2 h1, #aside2 span, #aside2 p{
+        color: var(--color-principal);
+        margin: 0;
+        padding: 0;
+    }
+    
+    #aside2 h1{
+        font-weight: 500;
+    }
+    
+    #aside2 span{
+        font-size: 50px;
+        font-weight: 500;
+        line-height: 1;
+    }
+    
+    #aside2 p{
+        font-size: 20px;
+        font-weight: 600;
+        background: linear-gradient(to right, rgb(18, 133, 255), rgb(239, 9, 255));
+        background-clip: text;
+        color: transparent;
+    }
+    
+    .social-icons{
+        padding: 0% 35% 1% 35%;
+        margin-top: 3%;
+        display: flex;
+        justify-content: center;
+        gap: 15%;
+    }
+    
+    .social-icons .icons{
+        color: var(--color-principal);
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 20px;
+        padding: 7px;
+        border: solid 2px, var(--color-principal);
+        border-radius: 50%;
+        transition: ease-in-out 0.5s;
+        font-size: 17px;
+    }
+    
+    #btn-me-chame{
+        cursor: pointer;
+        color: var(--color-principal);
+        margin-top: 40px;
+        padding: 0px 10px 0px 10px;
+        justify-content: center;
+        align-items: center;
+        width: 275px;
+        height: 60px;
+        border-radius: 25px;
+        font-size: 17px;
+        font-weight: 600;
+        border: solid 2px;
+        background-color: transparent;
+        transition: ease-in-out 0.5s;
+    }
+    
+    #btn-me-chame a{
+        color: var(--color-principal);
+    }
+    
+    #btn-me-chame:hover{
+        color: var(--background-color-principal);
+        background-color: var(--color-principal);
+        /* border: none; */
+    }
+
+    #projetos h1, #soft-skills h1, #hard-skills h1, #sobre-mim h1, #formulario h1{
+        font-size: 20px;
+    }
+
+    #sobre-mim{
+        width: 100%;
+        margin: auto;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card-sobre-mim{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    border: solid 3px var(--color-principal);
+    flex-direction: column;
+    gap: 2%;
+    border-radius: 25px;
+    padding: 15px;
+    margin: 0px;
+    width: 300px;
+    height: auto;
+    }
+
+    .card-sobre-mim img{
+        width: 300px;
+        height: 300px;
+        margin-bottom: 5px;
+    }
+
+    .descricao i{
+        font-size: 15px;
+    }
+    
+    .descricao h2{
+        font-size: 25px;
+        margin-bottom: 6px;
+    
+    }
+    
+    .descricao h3{
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        margin-bottom: 6px;
+    }
+    
+    .descricao h4{
+        display: flex;
+        gap: 4px;
+        align-items: center;
+        margin-bottom: 6px;
+    }
+    
+    .descricao p{
+        display: flex;
+        gap: 4px;
+        align-items:flex-start;
+        margin-bottom: 6px;
+    }
+
+    #formulario form{
+        width: 290px;
+    }
+
+    footer p{
+        font-size: 11px;
+    }
+    
+    
+/*inicio MODAL PROJETOS estilizacsao do modal de cada projeto*/ 
+.modal{
+    visibility: hidden;
+    padding: 0;
+    margin: 0;
+    width: auto;
+    height: 100vh;
+    backdrop-filter: blur(10px);
+    background-color: var(--background-color-principal);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateY(-20px);
+    transition: visibility 0s linear 0.2s, opacity 0.2s ease, transform 0.2s ease;
+}
+
+#modal-01{
+    visibility: hidden;
+    opacity: 0;
+
+}
+
+#modal-01.visivel{
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+    transition-delay: 0s;
+    transform: translateY(0); /* Posição normal */
+}
+
+.modal .img-conteiner{
+    background-color: rgba(77, 77, 77, 0.5);
+    backdrop-filter: blur(20px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+}
+
+.modal .img-conteiner button{
+    background-color: red;
+    color: var(--color-principal);
+    box-shadow: 1px 1px 5px rgb(76, 76, 76, 1);
+    border: none;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.modal .img-conteiner button:hover{
+    opacity: 0.5;
+}
+
+.modal .img-conteiner img{
+    max-width: 300px;
+    height: 220px;
+    object-fit: cover;
+    display: flex;
+    box-shadow: 10px -50px 100px rgb(44, 44, 44), 
+               -10px -50px 100px rgb(44, 44, 44);
+}
+
+.modal .modal-projeto{
+    background-color: var(--background-color-principal);
+    margin: 0;
+    padding: 10px 20px;
+    height: 700px;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+
+}
+
+.modal .modal-projeto h1{
+    margin: 10px 0;
+    padding: 0;
+    font-size: 30px;
+
+}
+
+.modal .modal-projeto h6{
+    font-size: 13px;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+}
+
+.modal .modal-projeto p{
+    font-size: medium;
+
+}
+
+.modal .modal-projeto h2{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.modal .modal-projeto .tech-icons{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 25px;
+    row-gap: 15px;
+    column-gap: 10px;
+}
+
+.modal .modal-projeto .tech-icons li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 4px 10px;
+    flex-direction: row;
+    border-radius: 20px;
+    font-size: 17px;
+}
+
+.modal .modal-projeto .botoes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+.modal .modal-projeto button{
+    background-color: transparent;
+    color: var(--color-principal);
+    border: 2px solid var(--color-principal);;
+    border-radius: 15px;
+    width: auto;
+    padding: 5px 10px;
+    margin: 30px 0;
+    font-size: 15px;
+    cursor: pointer;
+    display: flex;
+    align-self: flex-end;
+    transition-delay: 0s;
+    transition: none;
+    transition: ease-in-out 0.1s;
+}
+
+.modal .modal-projeto button:hover{
+    opacity: 0.5;
+}
+
+
+/* fim MODAL PROJETOS */
+
+    
+}

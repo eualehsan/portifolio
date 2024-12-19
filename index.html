@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, initial-position=#inicio">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer"/> <!-- font awesome -->
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+    <link rel="icon" href="./img/imagem-de-alessandro.png">
+    <title>Portifólio de Alessandro Sampaio</title>
+</head>
+
+<body>
+    <header>
+        <ul class="header-conteiner">
+            <li><a class="nav-link" href="#inicio">Inicio</a></li>
+            <li><a class="nav-link" href="#hard-skills">Tecnologias</a></li>
+            <li><a class="nav-link" href="#projetos">Projetos</a></li>
+            <li><a class="nav-link" href="#soft-skills">Habilidades</a></li>
+            <li><a class="nav-link" href="#sobre-mim">Sobre mim</a></li>
+        </ul>
+        
+        <div class="modo-claro-conteiner">
+                <label for="switch" class="toggle">  <!-- TROCAR ENTRE TEMA CLARO E ESCURO -->
+                <input type="checkbox" id="switch">
+                    <span class="icon icon--sol">
+                        <i class="fa-solid fa-sun"></i>
+                    </span>
+            
+                    <span class="icon icon--lua">
+                        <i class="fa-solid fa-moon"></i>
+                    </span>
+                </label>
+        </div>
+    </header>
+    <nav> <!-- MENU HABURGUER PARA DISPOSITIVOS MÓVEIS -->
+        <i class="fa-solid fa-bars"></i>
+        <ul class="menu">
+            <li><a class="nav-link" href="#inicio">Inicio</a></li>
+            <li><a class="nav-link" href="#hard-skills">Tecnologias</a></li>
+            <li><a class="nav-link" href="#projetos">Projetos</a></li>
+            <li><a class="nav-link" href="#soft-skills">Habilidades</a></li>
+            <li><a class="nav-link" href="#sobre-mim">Sobre mim</a></li>
+        </ul>
+
+        <div class="modo-claro-conteiner">
+            <label for="switch" class="toggle">  <!-- TROCAR ENTRE TEMA CLARO E ESCURO MOBILE -->
+            <input type="checkbox" id="switch">
+                <span class="icon icon--sol">
+                    <i class="fa-solid fa-sun"></i>
+                </span>
+            
+                <span class="icon icon--lua">
+                    <i class="fa-solid fa-moon"></i>
+                </span>
+            </label>
+            <p data-en="Theme" data-pt="Tema">Tema</p>
+        </div>
+    </nav>
+
+
+    <a href="#inicio" title="voltar ao topo"><i id="voltar-ao-topo" class="fa-solid fa-arrow-up"></i></a> <!-- BOTAO VOLTAR AO TOPO -->
+
+    <section id="inicio" >
+        <aside id="aside1">
+            <img id="me-img" src="./img/imagem-de-alessandro.png" alt="uma imagem de alessandro">  
+        </aside>
+        <aside id="aside2">
+            <h1>Olá, me chamo</h1><span>Alessandro Sampaio</span> <br>
+            <p>Desenvolvedor front-end</p>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/eualehsan" target="_blank" id="instagram" class="icons"><i class="fa-brands fa-instagram" ></i></a>
+                <a href="https://www.linkedin.com/in/alessandrossousa" target="_blank" id="linkedin" class="icons"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://github.com/eualehsan" target="_blank" id="github" class="icons"><i class="fa-brands fa-github"></i></a>
+            </div>
+            <a href="#formulario">
+                <button id="btn-me-chame">
+                        <h6>Chamar para conversar</h6>
+                        <i class="fa-solid fa-square-arrow-up-right"></i>
+                </button>
+            </a>
+        </aside>
+    </section>
+    
+    <section id="hard-skills">
+        <div class="card-conteiner">
+            <h1>tecnologias</h1>
+            <div class="card-hard-skills">
+                <i id="html5" class="fa-brands fa-html5"></i>
+                <h2>HTML5</h2>
+                <p>Crio estruturas de páginas web de forma eficiente e organizada. Construo o conteúdo bem formatado, acessível e funcional, desde simples sites estáticos até páginas mais complexas.</p>
+            </div>
+            <div class="card-hard-skills">
+                <i id="css3" class="fa-brands fa-css3-alt"></i>
+                <h2>CSS3</h2>
+                <p>Sei aplicar estilos que tornam o design visualmente atraente e responsivo. Utilizo técnicas modernas como Flexbox e Grid e animações para melhorar a estética e a usabilidade do site em diferentes dispositivos.</p>
+            </div>
+            <div class="card-hard-skills">
+                <i id="ux-ui" class="fa-solid fa-wand-magic-sparkles"></i>
+                <h2>UX/UI</h2>
+                <p>Tenho habilidades em criar layouts intuitivos, sempre focando na usabilidade e acessibilidade. Trabalho com base em boas práticas de design, garantindo que a interface seja atraente e ao mesmo tempo funcional.</p>
+            </div>
+            <div class="card-hard-skills">
+                <i id="javascript" class="fa-brands fa-js"></i>
+                <h2>Javascript</h2>
+                <p>Sou capaz de implementar lógica básica e intermediária, como validação de formulários e interações do usuário, e de consumir APIs. Domino conceitos como variáveis, funções, loops, arrays, além de manipulação de dados.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="projetos">
+        <div class="card-conteiner">
+            <h1>Projetos</h1>
+            <div class="card-project" data-project-id="0">
+                <img class="img-project" src="./img/img-calculadora.jpeg" alt="imagem do projeto de uma calculadora">
+                <h2>Calculadora simples</h2>
+                <p>Uma calculadora simples feita com conhecimentos básicos em HTML5, CSS3 e Javascript. Com funções de somar, subtrair, multiplicar e dividir.
+                </p>
+                <ul class="tech-icons">
+                    <li id="html5-colorfull"><i class="fa-brands fa-html5"></i><h6>html5</h6></li>
+                    <li id="css3-colorfull"><i class="fa-brands fa-css3-alt"></i><h6>css3</h6></li>
+                    <li id="javascript-colorfull"><i class="fa-brands fa-js"></i><h6>javascript</h6></li>
+        
+                </ul>
+                <button class="btn-abrir" onclick="abreModal(0)">
+                    <span>Ver projeto</span>
+                    <i class="fa-solid fa-circle-arrow-right"></i>
+                </button>
+            </div>
+
+            <div class="card-project" data-project-id="1">
+                <img class="img-project" src="./img/proj-the-walking-dead.png" alt="Hub The Walking Dead">
+                <h2>Hub de 'The Walking Dead'</h2>
+                <p>Veja detalhes da série, dos seus spin-offs e dos quadrinhos!</p>
+                <p style="color: rgb(201, 0, 0); font-size: 14px; margin: 0 0 5px 0; padding: 0; font-weight: 600;">Este projeto estará  disponível em breve!</p> <!-- AVISO -->
+                <ul class="tech-icons">
+                    <li id="html5-colorfull"><i class="fa-brands fa-html5"></i><h6>html5</h6></li>
+                    <li id="css3-colorfull"><i class="fa-brands fa-css3-alt"></i><h6>css3</h6></li>
+                    <li id="javascript-colorfull"><i class="fa-brands fa-js"></i><h6>javascript</h6></li>
+                    <li id="ux-ui-colorfull"><i class="fa-solid fa-wand-magic-sparkles"></i><h6>ux/ui</h6></li>
+                    <li id="api-colorfull"><i class="fa-solid fa-cloud-arrow-down"></i><h6>API</h6></li>
+                </ul>
+                <button class="btn-abrir" onclick="abreModal(1)">
+                    <span>Não disponível</span>
+                    <i class="fa-solid fa-circle-arrow-right"></i>
+                </button>
+            </div>
+            
+        </div>
+    </section>
+
+    <section class="modal" id="modal-01"> <!-- MODAL PARA CADA PROJETO -->
+        <div class="img-conteiner">
+            <img id="modal-img" src="" alt="imagem do projeto">
+            <button class="btn-fechar" onclick="fechaModal()" title="fechar">
+                <i class="fa-solid fa-x"></i>
+            </button>
+        </div>
+        <div class="modal-projeto" id="modal">
+            <h1 id="modal-title">Titulo do projeto</h1>
+            <h6 id="modal-date">Publicado em 01/11/2024</h6>
+            <p id="modal-description">Uma descrição tenetur sit expedita ipsum reprehenderit dolorum incidunt voluptates nam odit quod voluptatibus a dolor, quos accusamus facere at quibusdam officia veritatis necessitatibus!</p>
+            <h2>Tecnologias utilizadas:</h2>
+            <ul id="modal-tech-icons" class="tech-icons">
+                <li id="html5-colorfull"><i class="fa-brands fa-html5"></i><h6>html5</h6></li>
+                <li id="css3-colorfull"><i class="fa-brands fa-css3-alt"></i><h6>css3</h6></li>
+                <li id="javascript-colorfull"><i class="fa-brands fa-js"></i><h6>javascript</h6></li>
+            </ul>
+            <div class="botoes">
+                <button>
+                    <a id="modal-github-link" target="_blank" href="#">
+                        <span>Ver no Github    </span>
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                </button>
+
+                <button>
+                    <a id="modal-link" target="_blank" href="#">
+                        <span>Ver execução    </span>   
+                        <i class="fa-solid fa-square-arrow-up-right"></i>
+                    </a>
+                </button>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="soft-skills">
+        <div class="card-conteiner">
+            <h1>habilidades</h1>
+        <div class="card-soft-skills">
+            <i class="fa-solid fa-comments"></i>
+            <h2>Comunicação</h2>
+            <p>Me expresso de forma clara e eficaz. Valorizo a escuta ativa, pois acredito que a boa comunicação começa com entender bem o que o outro está dizendo.
+            </p>
+        </div>
+        <div class="card-soft-skills">
+            <i class="fa-solid fa-people-group"></i>
+            <h2>Trabalho em equipe</h2>
+            <p>Gosto de colaborar com outras pessoas, compartilhando ideias e ouvindo as contribuições de todos.
+            </p>
+        </div>
+        <div class="card-soft-skills">
+            <i class="fa-solid fa-lightbulb"></i>
+            <h2>Resolução de problemas</h2>
+            <p>Sou focado em encontrar soluções criativas para os problemas. Diante de desafios, procuro analisá-los com calma e identificar a causa.
+            </p>
+        </div>
+        <div class="card-soft-skills">
+            <i class="fa-solid fa-puzzle-piece"></i>
+            <h2>Adaptabilidade</h2>
+            <p>Me esforço para aprender rapidamente novas ferramentas, processos ou técnicas. Vejo as mudanças como oportunidades de crescimento e procuro me ajustar a elas de maneira positiva.
+            </p>
+        </div>
+        <div class="card-soft-skills">
+            <i class="fa-solid fa-calendar-check"></i>
+            <h2>Gestão de tempo</h2>
+            <p>Sou bastante organizado e sei priorizar minhas tarefas para garantir que o trabalho seja entregue no prazo. Valorizo a produtividade e estou sempre buscando formas de otimizar meu tempo.
+            </p>
+        </div>
+        <div class="card-soft-skills">
+            <i class="fa-solid fa-brain"></i>
+            <h2>Intelegência emocional</h2>
+            <p>Procuro manter a calma em situações de pressão e sou capaz de reconhecer e lidar com as emoções dos outros de maneira empática.
+            </p>
+        </div>
+        </div><!-- fim do conteiner de cards -->
+    </section>
+
+    <section id="sobre-mim">
+        <h1>SOBRE MIM</h1>
+        <div class="card-sobre-mim">
+            <div class="imagem">
+                <img src="./img/img-sobre-mim.jpg" alt="">
+            </div>
+            <div class="descricao">
+                <h2>Alessandro S. Sousa, 21</h2>
+                    
+                <div class="div01">
+                    <i class="fa-solid fa-earth-americas"></i>             
+                    <h3>Teresina, PI, Brasil</h3>
+                </div>
+
+                <div class="div01">
+                    <i class="fa-solid fa-laptop-code"></i>
+                    <h4>Desenvolvedor front-end, freelancer</h4>
+                </div>
+
+                <div class="div01">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <p>Graduando em Ánalise e Desenvolvimento de Sistemas pela Faculdade Mauricio de Nassau</p>
+                </div>
+
+                <div class="div01">
+                    <i class="fa-solid fa-quote-left"></i>
+                    <p>Olá, visitante! Sou um apaixonado por programação e tecnologia, estou em busca de novos desafios e oportunidades para aprender. Gosto de explorar novas tecnologias e ferramentas. Estou ingressando na área muito motivado para contribuir com meu conhecimento e ideias, e também, aprender com profissionais experientes. Estou empolgado para começar a minha trajetória como desenvolvedor e fazer a diferença!</p>
+                </div>
+            </div> 
+        </div>
+    </section>
+
+    <section id="formulario">
+        <form action="https://formsubmit.co/eualehsan28@gmail.com" method="POST">
+            <h1>Fale comigo</h1>
+
+            <label for="name">Nome completo</label>
+            <input type="name" name="nome" id="name" required>
+
+            <label for="email">E- mail</label>
+            <input type="email" name="email" id="email" required>
+
+            <label for="tipo-de-servico">Tipo de serviço</label>
+            <select name="_subject" id="tipo-de-servico" required>
+                <option value="landing-page">Landing page</option>
+                <option value="site-institucional">Site institucional</option>
+                <option value="site-estático">Site estático</option>
+                <option value="Outro">Outro</option>
+            </select>
+            <label for="descricao-de-servico">Descrição</label>
+            <textarea placeholder="Uma descrição do seu projeto" name="message" id="descricao-de-servico" required></textarea>
+            <button type="submit">
+                <span>Enviar</span>
+                <i class="fa-regular fa-paper-plane"></i>
+            </button>
+            
+            <input type="hidden" name="_next" value="https://eualehsan.github.io/portifolio1/thanks-page.html">
+            <input type="hidden" name="_subject" value="Portifólio de Alessandro Sampaio">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_autoresponse" value="Obrigado pelo contato! Retornarei seu contato em breve.">
+        </form>
+    </section>
+
+    <footer>
+        <p>
+            Desenvolvido por Alessandro Sampaio
+        </p>
+
+        <p>
+            &#169 2024 Todos os direitos reservados.
+        </p>
+    </footer>
+</body>
+</html>
