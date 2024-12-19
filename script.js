@@ -10,7 +10,7 @@ const projetos = [ //array que guarda os dados de cada projeto para montar cada 
   {
     id: 0,
     title: "Calculadora simples",
-    date: "01 de outubro de 2024",
+    date: "01 de agosto de 2024",
     description: "Uma calculadora simples feita com conhecimentos básicos em HTML5, CSS3 e Javascript. Com funções de somar, subtrair, multiplicar e dividir.",
     image: "./img/img-calculadora.jpeg",
     techIcons: [
