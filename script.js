@@ -22,7 +22,7 @@ const projetos = [ //array que guarda os dados de cada projeto para montar cada 
     link: "https://eualehsan.github.io/calculadora/"
   },
   {
-    id: /*1*/ 100,
+    id: 1,
     title: "Hub de 'The Walking Dead'",
     date: "30 de novembro de 2024",
     description: "Este site funciona como um hub de fã para fã. Veja detalhes da série, dos seus spin-offs e dos quadrinhos!",
@@ -37,6 +37,22 @@ const projetos = [ //array que guarda os dados de cada projeto para montar cada 
     githubLink: "https://github.com/eualehsan/thewalkingdeadhub",
     link: "https://eualehsan.github.io/the-walking-dead-hub"
   }
+  ,
+  {
+    id: 2,
+    title: "Freedom Landing page",
+    date: "14 de abril de 2025",
+    description: "Landing page de uma marca ficcional de absorventes femininos. O site foi feito com HTML5 e CSS3.",
+    image: "./img/freedom-landing-page.png",
+    techIcons: [
+      { id: "html5-colorfull", iconClass: "fa-brands fa-html5", label: "HTML5" },
+      { id: "css3-colorfull", iconClass: "fa-brands fa-css3-alt", label: "CSS3" },
+      { id: "ux-ui-colorfull", iconClass: "fa-solid fa-wand-magic-sparkles", label: "UX/UI" }
+     ],
+    githubLink: "https://github.com/eualehsan/freedom-landing-page",
+    link: "https://eualehsan.github.io/freedom-landing-page"
+  }
+
 ];
 
 function abreModal(projectId) { //funcao que abre o modal e puxa do array as informaçoes de cada projeto quando clicado em 'ver projeto'
